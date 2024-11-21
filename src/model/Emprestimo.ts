@@ -133,17 +133,12 @@ export class Emprestimo{
 
             respostaBD.rows.forEach((linha) => {
                 const novoEmprestimo = new Emprestimo(
-                    linha.idAluno,
-                    linha.idLivro ,
-                    linha.dataEmprestimo,
-                    linha.dataDevolucao,
-                    linha.statusEmprestimo
+                    linha.id_aluno,
+                    linha.id_livro ,
+                    linha.data_emprestimo,
+                    linha.data_devolucao,
+                    linha.status_emprestimo
                 );
-
-                novoEmprestimo.setIdAluno(linha.id_aluno);
-                novoEmprestimo.setIdLivro(linha.idLivro);
-                novoEmprestimo.setDataEmprestimo(linha.emprestimo);
-                novoEmprestimo.setDataDevolucao(linha.dataDevolucao);
 
                 listaDeEmprestimo.push(novoEmprestimo);
             });

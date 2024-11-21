@@ -174,11 +174,13 @@ export class Aluno {
                 const novoAluno = new Aluno(
                     linha.nome, // coluna banco de dados
                     linha.sobrenome,
-                    linha.DataNascimento,
+                    linha.data_nascimento,
                     linha.endereco,
                     linha.email,
                     linha.celular
                 );
+
+                novoAluno.setIdAluno(linha.id_aluno);
                
 
                 listaDeAlunos.push(novoAluno);
@@ -193,7 +195,7 @@ export class Aluno {
     static async cadastroAluno(aluno: Aluno): Promise<boolean> {
         try {
             // query para fazer insert de um aluno no banco de dados
-            const queryInsertaluno = `INSERT INTO aluno (nome, sobrenome, datadenascimento, endereco, email, celular)
+            const queryInsertaluno = `INSERT INTO aluno (nome, sobrenome, data_nascimento, endereco, email, celular)
                                         VALUES
                                         ('${aluno.getNome()}', 
                                         '${aluno.getSobrenome()}', 
