@@ -174,14 +174,12 @@ export class Aluno {
                 const novoAluno = new Aluno(
                     linha.nome, // coluna banco de dados
                     linha.sobrenome,
-                    linha.dataNascimento,
+                    linha.DataNascimento,
                     linha.endereco,
                     linha.email,
                     linha.celular
                 );
-                novoAluno.setIdAluno(linha.id_aluno);
-                novoAluno.setRA(linha.ra);
-                novoAluno.setDataNascimento(linha.getDataNascimento);
+               
 
                 listaDeAlunos.push(novoAluno);
             });
