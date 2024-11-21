@@ -135,12 +135,15 @@ export class Emprestimo{
                 const novoEmprestimo = new Emprestimo(
                     linha.idAluno,
                     linha.idLivro ,
-                    linha.ataEmprestimo,
+                    linha.dataEmprestimo,
                     linha.dataDevolucao,
                     linha.statusEmprestimo
                 );
 
-                novoEmprestimo.setIdEmprestimo(linha.emprestimo);
+                novoEmprestimo.setIdAluno(linha.id_aluno);
+                novoEmprestimo.setIdLivro(linha.idLivro);
+                novoEmprestimo.setDataEmprestimo(linha.emprestimo);
+                novoEmprestimo.setDataDevolucao(linha.dataDevolucao);
 
                 listaDeEmprestimo.push(novoEmprestimo);
             });

@@ -232,12 +232,15 @@ public getISBN(): string{
                     linha.autor,
                     linha.editora,
                     linha.anoPublicacao,
-                    linha.isb,
+                    linha.isbn,
                     linha.quantTotal,
                     linha.quantDisponivel,
                     linha.valorAquisicao,
                     linha.statusLivroEmprestado
      );
+    
+
+
 
                 // atribui o ID objeto
                 novoLivro.setIdLivro(linha.id_livro);

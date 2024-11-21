@@ -167,20 +167,21 @@ export class Aluno {
         const listaDeAlunos: Array<Aluno> = [];
 
         try {
-            const querySelectAluno = `SELECT * FROM  Aluno`;
+            const querySelectAluno = `SELECT * FROM  Aluno;`
             const respostaBD = await database.query(querySelectAluno);
 
             respostaBD.rows.forEach((linha) => {
                 const novoAluno = new Aluno(
-                    linha.nome,
+                    linha.nome, // coluna banco de dados
                     linha.sobrenome,
                     linha.dataNascimento,
                     linha.endereco,
                     linha.email,
                     linha.celular
                 );
-
                 novoAluno.setIdAluno(linha.id_aluno);
+                novoAluno.setRA(linha.ra);
+                novoAluno.setDataNascimento(linha.getDataNascimento);
 
                 listaDeAlunos.push(novoAluno);
             });
