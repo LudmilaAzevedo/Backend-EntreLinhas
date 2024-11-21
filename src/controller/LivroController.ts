@@ -70,7 +70,7 @@ export class LivroController extends Livro {
                 return res.status(200).json({ mensagem: "Livro cadastrado com sucesso!" });
             } else {
                 // retorno uma mensagem de erro
-                return res.status(400).json({ mensagem: "Erro ao cadastra o livro. Entre em contato com o administrador do sistema."})
+                return res.status(400).json({ mensagem: "Erro ao cadastrar o livro. Entre em contato com o administrador do sistema."})
             }
             
         } catch (error) {

@@ -268,7 +268,7 @@ public getISBN(): string{
                                         '${livro.getQuantTotal()}',
                                         '${livro.getQuantDisponivel()}',
                                         '${livro.getValorAquisicao()}',
-                                        '${livro.getStatusLivroEmprestado()})
+                                        '${livro.getStatusLivroEmprestado()}')
                                         RETURNING id_livro;`;
 
             // executa a query no banco e armazena a resposta
