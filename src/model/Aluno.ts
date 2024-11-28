@@ -181,6 +181,7 @@ export class Aluno {
                 );
 
                 novoAluno.setIdAluno(linha.id_aluno);
+                novoAluno.setRA(linha.ra);
                
 
                 listaDeAlunos.push(novoAluno);

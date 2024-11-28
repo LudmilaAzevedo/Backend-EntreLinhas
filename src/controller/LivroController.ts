@@ -4,7 +4,7 @@ import { Livro } from "../model/Livro";
 interface LivroDTO {
     titulo: string,
     editora: string,
-    autora: string,
+    autor: string,
     anoPublicacao: string,
     isbn: string,
     quantTotal: number,
@@ -52,7 +52,7 @@ export class LivroController extends Livro {
 
             // instanciando um objeto do tipo carro com as informações recebidas
             const novoLivro = new Livro(LivroRecebido.titulo, 
-                                        LivroRecebido.autora, 
+                                        LivroRecebido.autor, 
                                         LivroRecebido.editora, 
                                         LivroRecebido.anoPublicacao,
                                         LivroRecebido.isbn,
